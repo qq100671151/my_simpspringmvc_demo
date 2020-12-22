@@ -27,4 +27,15 @@ public class HelloWordController {
         map.put("name","张小斐");
         return "admin/you";
     }
+
+
+    @RequestMapping("/getTestDataMap2/{id}")
+    @ResponseBody
+    public Map<String,String> getTestDataMap2(@PathVariable("id") String id){
+        System.out.println("进来了"+id);
+        Map<String,String> map=new HashMap<>();
+        map.put("id","1");
+        map.put("name","张小斐");
+        return map;
+    }
 }
